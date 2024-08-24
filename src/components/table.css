@@ -1,0 +1,85 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 12px;
+    border: 2px solid #0317f9;
+    text-align: left;
+  }
+
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  .pageButtons > b, button{
+    padding: 10px;
+    gap: 10px;
+  }
+  @media (max-width: 768px) {
+    table thead {
+      display: none;
+    }
+  
+    table, table tbody, table tr, table td {
+      display: block;
+      width: auto;
+    }
+  
+    table tr {
+      margin-bottom: 15px;
+    }
+  
+    table td {
+      text-align: center;
+      
+      position: relative;
+      border: none;
+      border-bottom: 1px solid 
+    }
+}
+
+
+
+
+
+
+/* Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
