@@ -85,14 +85,14 @@ const UserData = () => {
         </button>
         <button onClick={handleNext}>Next</button>
       </div>
-      {
+      {modalIsOpen && selectedUser && (
         <Modal isOpen={modalIsOpen} onClose={closeModal}>
           <h2>{selectedUser.name}</h2>
           <p>Username: {selectedUser.username}</p>
           <p>Email: {selectedUser.email}</p>
           <p>City: {selectedUser.address.city}</p>
         </Modal>
-      }
+      )}
     </div>
   );
 };
