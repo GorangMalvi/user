@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import UserData from './components/userData';
+import UserData from './components/UserData';
+
 
 const App = () => {
 
