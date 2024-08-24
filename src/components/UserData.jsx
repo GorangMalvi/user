@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import './table.css'
+import "./UserData.css";
 import Modal from "./Modal";
 
 const UserData = () => {
@@ -26,11 +26,11 @@ const UserData = () => {
         console.log(err);
       });
   }, [page]);
-  
+
   const handleView = (user) => {
     setSelectedUser(user);
     setModalIsOpen(true);
-    console.log("calling...,",data)
+    console.log("calling...,", selectedUser);
   };
   const closeModal = () => setModalIsOpen(false);
   const handleNext = () => {
@@ -85,23 +85,14 @@ const UserData = () => {
         </button>
         <button onClick={handleNext}>Next</button>
       </div>
-      {selectedUser && (
-        // <ReactModal
-        //   isOpen={modalIsOpen}
-        //   appElement={document.getElementById("root")}
-        //   onRequestClose={() => setModalIsOpen(false)}
-        // >
-        //   <h2>{selectedUser.name}</h2>
-        //   <p>Username: {selectedUser.username}</p>
-        //   <p>Email: {selectedUser.email}</p>
-        //   <p>City: {selectedUser.address.city}</p>
-        //   <button onClick={() => setModalIsOpen(false)}>Close</button>
-        // </ReactModal>
+      {
         <Modal isOpen={modalIsOpen} onClose={closeModal}>
-        <h2>Modal Title</h2>
-        <p>This is the content of the modal.</p>
-      </Modal>
-       )} 
+          <h2>{selectedUser.name}</h2>
+          <p>Username: {selectedUser.username}</p>
+          <p>Email: {selectedUser.email}</p>
+          <p>City: {selectedUser.address.city}</p>
+        </Modal>
+      }
     </div>
   );
 };

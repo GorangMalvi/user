@@ -23,6 +23,9 @@ table {
     padding: 10px;
     gap: 10px;
   }
+
+
+  /* table responsiveness */
   @media (max-width: 768px) {
     table thead {
       display: none;
@@ -45,13 +48,7 @@ table {
       border-bottom: 1px solid 
     }
 }
-
-
-
-
-
-
-/* Modal.css */
+/* css for modal */
 .modal-overlay {
   position: fixed;
   top: 0;
