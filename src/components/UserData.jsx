@@ -30,10 +30,13 @@ const UserData = () => {
   const handleView = (user) => {
     setSelectedUser(user);
     setModalIsOpen(true);
-    console.log("calling...,", selectedUser);
+    console.log("calling...,", user);
   };
   const closeModal = () => setModalIsOpen(false);
   const handleNext = () => {
+    if (data.length<=10){
+      return;
+    }
     setPage((prev) => prev + 1);
   };
 
